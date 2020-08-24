@@ -51,11 +51,19 @@ disqusShortname = "yourdiscussshortname"
     custom_js = []
 
 # If you want to use fathom(https://usefathom.com) for analytics, add this section
-[params.fathomAnalytics]
-    siteID = "ABCDE"
-    # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-    serverURL = "analytics.example.com"
+[params.woopraAnalytics]
+    <!-- Start of Woopra Code -->
+<script>
+  (function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+  })("woopra");
 
+  woopra.config({
+      domain: 'groovy-cedar-22594.netlify.app'
+  });
+  woopra.track();
+</script>
+<!-- End of Woopra Code -->
 # If you want to use plausible(https://plausible.io) for analytics, add this section
 [params.plausibleAnalytics]
     domain = "example.com"
